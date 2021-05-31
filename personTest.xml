@@ -2,8 +2,9 @@
 
 <suite name="TestSuitePerson">
     <test name="TestPerson">
+        <parameter name="age" value="15"/>
         <classes>
-            <class name="person.Person3"/>
+            <class name="person.TestPerson"/>
         </classes>
     </test>
 </suite>

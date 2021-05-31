@@ -1,19 +1,17 @@
 package person;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import server.Person;
 
 public class TestPerson {
     Person p;
 
-//    @BeforeClass
-//    public void setUp() {
-//        p = new Person();
-//        System.out.println("SetUp");
-//    }
+    @BeforeMethod
+    public void setUp() {
+        p = new Person();
+        System.out.println("SetUp");
+    }
 
 //    @AfterMethod
 //    public void Up() {
@@ -21,40 +19,28 @@ public class TestPerson {
 //        System.out.println("down");
 //    }
 
-
-    @Test
-    public void setAgeZero() {
+    @Test()
+    @Parameters({"age"})
+    public void verifySetAge(@Optional("15") String setAge) {
+        System.out.println("Parameter "+setAge );
         int expectedAge = 15;
-        p.setAge(0);
+        p.setAge(Integer.parseInt(setAge));
         int actualAge = p.getAge();
         Assert.assertEquals(actualAge, expectedAge, "Isn't equal");
     }
 
-    @Test
-    public void setAgePositive() {
-        int expectedAge = 10;
-        p.setAge(0);
-        int actualAge = p.getAge();
-        Assert.assertEquals(actualAge, expectedAge, "Isn't equal");
 
-    }
-
-    @Test
-    public void setAgeNegative() {
-        int expectedAge = 18;
-        p.setAge(18);
-        int actualAge = p.getAge();
-        Assert.assertEquals(actualAge, expectedAge, "Isn't equal");
-
-    }
-
-    @Test
-    public void setAgeOld() {
-        int expectedAge = 27;
-        p.setAge(27);
-        int actualAge = p.getAge();
-        Assert.assertEquals(actualAge, expectedAge, "Isn't equal");
-
-    }
-
+//    @Test(dataProvider = "ages")
+//    public void verifySetAge(int expected, int setAge) {
+//        int expectedAge = expected;
+//        p.setAge(setAge);
+//        int actualAge = p.getAge();
+//        Assert.assertEquals(actualAge, expectedAge, "Isn't equal");
+//    }
+//
+//    @DataProvider(name = "ages")
+//    public Object[][] dataProvider(){
+//        Object[][] arr = {{10,0},{12,12},{10, -18},{100,100},{10, 105}};
+//        return arr;
+//    }
 }

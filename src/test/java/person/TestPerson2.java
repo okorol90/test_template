@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import server.Person;
 
-public class TestAge {
+public class TestPerson2 {
 
     @Test
     public void setAgeZero1(){

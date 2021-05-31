@@ -4,6 +4,7 @@
     <test name="Test">
         <classes>
             <class name="person.TestPerson"/>
+<!--            <class name="person.TestPerson2"/>-->
         </classes>
     </test>
 </suite>

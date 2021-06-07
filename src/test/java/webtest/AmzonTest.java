@@ -23,11 +23,13 @@ public class AmzonTest {
         driver.findElement(By.xpath("//a[text() = 'Computer Components']")).click();
         Thread.sleep(1000);
         String itemText = driver.findElement(By.xpath("//div[@data-index='0']//h2//span")).getText();
-        String itemPrice = driver.findElement(By.xpath("//div[@data-index='0']//span[@class='a-price']//span[@aria-hidden=\"true\"]")).getText();
+        String itemPrice = driver.findElement(By.xpath("//div[@data-index='0']//span[@class='a-price']//span[@class='a-offscreen']")).getText();
+        String itemPrice1 = driver.findElement(By.xpath("//div[@data-index='0']//span[@class='a-price']//span[@aria-hidden=\"true\"]")).getText();
 
         driver.quit();
 
         System.out.println(itemText);
-        System.out.println(itemPrice.replace("$", "").replace("\n", "."));
+        System.out.println(itemPrice);
+        System.out.println(itemPrice1.replace("$", "").replace("\n", "."));
     }
 }

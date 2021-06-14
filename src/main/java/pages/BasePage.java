@@ -1,5 +1,7 @@
 package pages;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -16,12 +18,14 @@ public abstract class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions actions;
+    protected Logger log;
 
 
     protected BasePage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, 5);
         actions = new Actions(driver);
+        log = LogManager.getLogger(BasePage.class);
     }
 
     protected abstract BasePage open();
@@ -34,8 +38,10 @@ public abstract class BasePage {
     }
 
     public BasePage search(String search) throws Exception {
-        if (search.equals("Samsung")) {
-            throw new Exception("some exception");
+        log.info("in search and search str: "+search);
+        if (search.equals("iPhone")) {
+            log.info("in if, and search: " +search);
+//            throw new Exception("some exception");
         }
         driver.findElement(navBarInput).click();
         driver.findElement(navBarInput).clear();

@@ -1,0 +1,24 @@
+2021-06-14 21:22:34 INFO  BasePage:41 - in search and search str: Samsung
+2021-06-14 21:22:42 INFO  BasePage:41 - in search and search str: iPhone
+2021-06-14 21:23:47 INFO  BasePage:41 - in search and search str: Samsung
+2021-06-14 21:23:56 INFO  BasePage:41 - in search and search str: iPhone
+2021-06-14 21:23:56 INFO  BasePage:45 - info
+2021-06-14 21:23:56 WARN  BasePage:46 - warn
+2021-06-14 21:28:17 INFO  BasePage:41 - in search and search str: Samsung
+2021-06-14 21:28:25 INFO  BasePage:41 - in search and search str: iPhone
+2021-06-14 21:28:25 INFO  BasePage:43 - in if, and search: iPhone
+2021-06-14 21:31:52 INFO  HomePage:15 - in HomePage
+2021-06-14 21:31:58 INFO  HomePage:41 - in search and search str: Samsung
+2021-06-14 21:32:06 INFO  BasePage:41 - in search and search str: iPhone
+2021-06-14 21:32:06 INFO  BasePage:43 - in if, and search: iPhone
+2021-06-14 21:32:12 INFO  BasePage:31 - in returnFirstItemPrice()
+2021-06-14 21:33:04 INFO  HomePage:15 - in HomePage
+2021-06-14 21:33:09 INFO  HomePage:41 - in search and search str: Samsung
+2021-06-14 21:33:17 INFO  ResultAndFilterPage:41 - in search and search str: iPhone
+2021-06-14 21:33:17 INFO  ResultAndFilterPage:43 - in if, and search: iPhone
+2021-06-14 21:33:22 INFO  ResultAndFilterPage:33 - in returnFirstItemPrice()
+2021-06-14 21:54:48 INFO  HomePage:15 - in HomePage
+2021-06-14 21:54:53 INFO  HomePage:41 - in search and search str: Samsung
+2021-06-14 21:55:02 INFO  ResultAndFilterPage:41 - in search and search str: iPhone
+2021-06-14 21:55:02 INFO  ResultAndFilterPage:43 - in if, and search: iPhone
+2021-06-14 21:55:07 INFO  ResultAndFilterPage:33 - in returnFirstItemPrice()

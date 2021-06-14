@@ -1,5 +1,6 @@
 package pages;
 
+import org.apache.log4j.LogManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +14,7 @@ public class ResultAndFilterPage extends BasePage{
 
     public ResultAndFilterPage(WebDriver driver) {
         super(driver);
+        log = LogManager.getLogger(ResultAndFilterPage.class);
     }
 
     @Override
@@ -28,6 +30,7 @@ public class ResultAndFilterPage extends BasePage{
     }
 
     public WebElement returnFirstItemPrice(){
+        log.info("in returnFirstItemPrice()");
         return driver.findElement(itemPrice);
     }
 

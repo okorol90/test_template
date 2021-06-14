@@ -19,9 +19,6 @@ public class TestBase {
         options = new ChromeOptions();
         options.addArguments("start-maximized");
         driver = new ChromeDriver(options);
-        wait = new WebDriverWait(driver, 5);
-
-        driver.get("https://www.amazon.com/");
     }
 
     @AfterMethod

@@ -26,14 +26,17 @@ public abstract class BasePage {
 
     protected abstract BasePage open();
 
-    public BasePage selectLanguage(String language){
+    public BasePage selectLanguage(String language) {
         actions.moveToElement(driver.findElement(btnLanFlag)).perform();
         By lang = By.xpath(String.format(locatorLang, language));
         wait.until(ExpectedConditions.elementToBeClickable(lang)).click();
         return this;
     }
 
-    public BasePage search(String search){
+    public BasePage search(String search) throws Exception {
+        if (search.equals("Samsung")) {
+            throw new Exception("some exception");
+        }
         driver.findElement(navBarInput).click();
         driver.findElement(navBarInput).clear();
         driver.findElement(navBarInput).sendKeys(search, Keys.ENTER);

@@ -28,7 +28,7 @@ public class AmazonIphoneSearchTest extends TestBase {
     }
 
     @Test
-    public void getPriceInRange() throws InterruptedException {
+    public void getPriceInRange() throws Exception {
         homePage.open()
                 .selectLanguage("Deutsch - DE")
                 .search(search1);

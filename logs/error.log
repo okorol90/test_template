@@ -29,3 +29,19 @@
 2021-06-16 19:23:24 INFO  HomePage:15 - in HomePage
 2021-06-16 19:23:27 INFO  HomePage:41 - in search and search str: iPhone
 2021-06-16 19:23:27 INFO  HomePage:43 - in if, and search: iPhone
+2021-06-16 20:12:39 INFO  HomePage:15 - in HomePage
+2021-06-16 20:12:41 INFO  HomePage:41 - in search and search str: Samsung
+2021-06-16 20:12:44 INFO  HomePage:41 - in search and search str: iPhone
+2021-06-16 20:12:44 INFO  HomePage:43 - in if, and search: iPhone
+2021-06-16 20:14:58 INFO  HomePage:15 - in HomePage
+2021-06-16 20:15:01 INFO  HomePage:41 - in search and search str: Samsung
+2021-06-16 20:15:04 INFO  HomePage:41 - in search and search str: iPhone
+2021-06-16 20:15:04 INFO  HomePage:43 - in if, and search: iPhone
+2021-06-16 20:17:45 INFO  HomePage:15 - in HomePage
+2021-06-16 20:17:48 INFO  HomePage:41 - in search and search str: Samsung
+2021-06-16 20:17:51 INFO  HomePage:41 - in search and search str: iPhone
+2021-06-16 20:17:51 INFO  HomePage:43 - in if, and search: iPhone
+2021-06-16 20:19:02 INFO  HomePage:15 - in HomePage
+2021-06-16 20:19:05 INFO  HomePage:41 - in search and search str: Samsung
+2021-06-16 20:19:08 INFO  HomePage:41 - in search and search str: iPhone
+2021-06-16 20:19:08 INFO  HomePage:43 - in if, and search: iPhone

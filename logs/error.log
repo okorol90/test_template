@@ -22,3 +22,10 @@
 2021-06-14 21:55:02 INFO  ResultAndFilterPage:41 - in search and search str: iPhone
 2021-06-14 21:55:02 INFO  ResultAndFilterPage:43 - in if, and search: iPhone
 2021-06-14 21:55:07 INFO  ResultAndFilterPage:33 - in returnFirstItemPrice()
+2021-06-16 19:22:19 INFO  HomePage:15 - in HomePage
+2021-06-16 19:22:24 INFO  HomePage:41 - in search and search str: Samsung
+2021-06-16 19:22:34 INFO  ResultAndFilterPage:41 - in search and search str: iPhone
+2021-06-16 19:22:34 INFO  ResultAndFilterPage:43 - in if, and search: iPhone
+2021-06-16 19:23:24 INFO  HomePage:15 - in HomePage
+2021-06-16 19:23:27 INFO  HomePage:41 - in search and search str: iPhone
+2021-06-16 19:23:27 INFO  HomePage:43 - in if, and search: iPhone

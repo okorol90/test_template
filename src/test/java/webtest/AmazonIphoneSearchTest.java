@@ -1,5 +1,6 @@
 package webtest;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -7,6 +8,8 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.ResultAndFilterPage;
 import pages.TodaysDealsPage;
+
+import java.util.List;
 
 public class AmazonIphoneSearchTest extends TestBase {
 
@@ -26,6 +29,17 @@ public class AmazonIphoneSearchTest extends TestBase {
 //        driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 //        driver.manage().timeouts().setScriptTimeout(5, TimeUnit.SECONDS);
     }
+
+    @Test
+    public void getOnlyIphoneInResult() throws Exception {
+        homePage.open()
+                .search(search2);
+        List<WebElement> lst = resultAndFilterPage.returnItemsName();
+
+        System.out.println(lst.size());
+
+    }
+
 
     @Test
     public void getPriceInRange() throws Exception {

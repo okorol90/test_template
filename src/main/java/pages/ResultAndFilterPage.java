@@ -5,12 +5,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class ResultAndFilterPage extends BasePage{
 
     private By chkBoxMinPrice = By.id("low-price");
     private By chkBoxMaxPrice = By.id("high-price");
     private By btnGo = By.xpath("//input[@aria-labelledby='a-autoid-1-announce']");
     private By itemPrice = By.xpath("//span[@aria-hidden=\"true\" and ancestor::span[@class='a-price']]");
+    private By itemName = By.xpath("//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-2']");
 
     public ResultAndFilterPage(WebDriver driver) {
         super(driver);
@@ -36,6 +39,10 @@ public class ResultAndFilterPage extends BasePage{
 
     public String returnFirstItemPriceAsText(){
         return driver.findElement(itemPrice).getText();
+    }
+
+    public List<WebElement> returnItemsName(){
+        return driver.findElements(itemName);
     }
 
     public Float returnFirstItemPriceInFloat(){

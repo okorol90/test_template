@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -28,8 +29,11 @@ public abstract class BasePage {
         log = LogManager.getLogger(BasePage.class);
     }
 
-    protected abstract BasePage open();
 
+    @Step("Open page")
+    public abstract BasePage open();
+
+    @Step("Select language {language}")
     public BasePage selectLanguage(String language) {
         actions.moveToElement(driver.findElement(btnLanFlag)).perform();
         By lang = By.xpath(String.format(locatorLang, language));
@@ -37,11 +41,12 @@ public abstract class BasePage {
         return this;
     }
 
+    @Step("Search next product {search}")
     public BasePage search(String search) throws Exception {
         log.info("in search and search str: "+search);
-        if (search.equals("iPhone")) {
+        if (search.equals("error")) {
             log.info("in if, and search: " +search);
-//            throw new Exception("some exception");
+            throw new Exception("some exception");
         }
         driver.findElement(navBarInput).click();
         driver.findElement(navBarInput).clear();

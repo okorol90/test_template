@@ -1,5 +1,9 @@
 package webtest;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.testng.Assert;
@@ -10,7 +14,8 @@ import pages.ResultAndFilterPage;
 import pages.TodaysDealsPage;
 
 import java.util.List;
-
+@Epic("Result list")
+@Story("Check price")
 public class AmazonIphoneSearchTest extends TestBase {
 
     String search1 = "Samsung";
@@ -30,7 +35,7 @@ public class AmazonIphoneSearchTest extends TestBase {
 //        driver.manage().timeouts().setScriptTimeout(5, TimeUnit.SECONDS);
     }
 
-    @Test
+//    @Test
     public void getOnlyIphoneInResult() throws Exception {
         homePage.open()
                 .search(search2);
@@ -41,21 +46,22 @@ public class AmazonIphoneSearchTest extends TestBase {
     }
 
 
+    @Severity(SeverityLevel.CRITICAL)
     @Test
     public void getPriceInRange() throws Exception {
         homePage.open()
-                .selectLanguage("Deutsch - DE")
+                .selectLanguage("ol - ES")
                 .search(search1);
         resultAndFilterPage.setPriceRangeAndClickGoBtn("100", "150")
                 .selectLanguage("English - EN")
                 .search(search2);
-        resultAndFilterPage.setPriceRangeAndClickGoBtn("100", "150");
+        resultAndFilterPage.setPriceRangeAndClickGoBtn("300", "500");
 
         System.out.println(resultAndFilterPage.returnFirstItemPrice().getSize());
         System.out.println(resultAndFilterPage.returnFirstItemPriceAsText());
 
         Float priceInFloat = resultAndFilterPage.returnFirstItemPriceInFloat();
-        Assert.assertTrue(priceInFloat > 100 && priceInFloat < 150, "Price isn't in range " + priceInFloat);
+        Assert.assertTrue(priceInFloat > 300 && priceInFloat < 500, "Price isn't in range " + priceInFloat);
 
 
 //        By item = By.xpath("//div[@data-component-type='s-search-result' and descendant::span[@class='a-price']]");

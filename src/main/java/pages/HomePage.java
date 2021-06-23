@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.apache.log4j.LogManager;
 import org.openqa.selenium.WebDriver;
 

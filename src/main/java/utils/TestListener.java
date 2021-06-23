@@ -1,5 +1,8 @@
 package utils;
 
+import io.qameta.allure.Attachment;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.*;
 
@@ -39,8 +42,7 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
     public void onTestFailure(ITestResult iTestResult) {
         System.out.println("onTestFailure");
         WebDriver driver = (WebDriver) iTestResult.getTestContext().getAttribute("driver");
-        ScreenShoot screenShoot = new ScreenShoot(driver);
-        ScreenShoot.makeScreenShoot(iTestResult);
+        saveScreenshot(driver);
     }
 
     @Override
@@ -61,5 +63,10 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
     @Override
     public void onFinish(ITestContext iTestContext) {
         System.out.println("onFinish Test");
+    }
+
+    @Attachment(value = "Page screenshot", type = "image/png")
+    public byte[] saveScreenshot(WebDriver driver) {
+        return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
     }
 }

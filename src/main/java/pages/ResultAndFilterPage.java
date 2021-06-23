@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.apache.log4j.LogManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +26,7 @@ public class ResultAndFilterPage extends BasePage{
         return this;
     }
 
+    @Step("Set price for filter in range from {min} to {max}")
     public ResultAndFilterPage setPriceRangeAndClickGoBtn(String min, String max){
         driver.findElement(chkBoxMinPrice).sendKeys(min);
         driver.findElement(chkBoxMaxPrice).sendKeys(max);
@@ -32,19 +34,23 @@ public class ResultAndFilterPage extends BasePage{
         return this;
     }
 
+    @Step("return first item from search result")
     public WebElement returnFirstItemPrice(){
         log.info("in returnFirstItemPrice()");
         return driver.findElement(itemPrice);
     }
 
+    @Step("Return text from first item in search result")
     public String returnFirstItemPriceAsText(){
         return driver.findElement(itemPrice).getText();
     }
 
+    @Step("return collection of element")
     public List<WebElement> returnItemsName(){
         return driver.findElements(itemName);
     }
 
+    @Step("Return price of first element in result")
     public Float returnFirstItemPriceInFloat(){
         String firstItemPrice = driver.findElement(itemPrice).getText()
                 .replace("$", "")

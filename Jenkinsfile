@@ -14,7 +14,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn clean test -Dfile=dataproviders -Ddp=smoke -Dthread=1'
+//                 sh 'mvn clean test -Dfile=dataproviders -Ddp=smoke -Dthread=1'
+                bat 'mvn clean test -Dfile=dataproviders -Ddp=smoke -Dthread=1'
             }
         }
     }

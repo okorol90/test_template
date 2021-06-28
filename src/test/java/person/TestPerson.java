@@ -30,17 +30,17 @@ public class TestPerson {
     }
 
 
-//    @Test(dataProvider = "ages")
-//    public void verifySetAge(int expected, int setAge) {
-//        int expectedAge = expected;
-//        p.setAge(setAge);
-//        int actualAge = p.getAge();
-//        Assert.assertEquals(actualAge, expectedAge, "Isn't equal");
-//    }
-//
-//    @DataProvider(name = "ages")
-//    public Object[][] dataProvider(){
-//        Object[][] arr = {{10,0},{12,12},{10, -18},{100,100},{10, 105}};
-//        return arr;
-//    }
+    @Test(dataProvider = "ages")
+    public void verifySetAge(int expected, int setAge) {
+        int expectedAge = expected;
+        p.setAge(setAge);
+        int actualAge = p.getAge();
+        Assert.assertEquals(actualAge, expectedAge, "Isn't equal");
+    }
+
+    @DataProvider(name = "ages")
+    public Object[][] dataProvider(){
+        Object[][] arr = {{10,0},{12,12},{10, -18},{100,100},{10, 105}};
+        return arr;
+    }
 }

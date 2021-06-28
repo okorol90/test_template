@@ -9,6 +9,7 @@ import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import utils.PropertyLoader;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -25,7 +26,7 @@ public class TestBase {
         options = new ChromeOptions();
         options.addArguments("start-maximized");
 //        driver = new ChromeDriver(options);
-        driver = new RemoteWebDriver(new URL("http://18.222.148.69:4444/wd/hub"), options);
+        driver = new RemoteWebDriver(new URL(PropertyLoader.getProperty("driverUrl")), options);
         result.setAttribute("driver", driver);
     }
 

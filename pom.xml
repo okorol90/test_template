@@ -14,6 +14,8 @@
         <testng.version>7.4.0</testng.version>
         <aspectj.version>1.9.7.M3</aspectj.version>
         <file>testng</file>
+        <dp>smoke</dp>
+        <thread>2</thread>
     </properties>
 
 
@@ -67,6 +69,10 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <systemPropertyVariables>
+                        <dataProvider>${dp}</dataProvider>
+                    </systemPropertyVariables>
+                    <threadCount>${thread}</threadCount>
                 </configuration>
                 <dependencies>
                     <dependency>

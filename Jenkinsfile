@@ -8,14 +8,14 @@ pipeline {
             }
         }
         stage('Analyze') {
-             steps {
-                echo "analyze"
+            steps {
+                echo 'analyze'
             }
         }
-        stage('Analyze') {
-             steps {
-                sh "mvn clean test -Dfile=dataproviders -Ddp=smoke -Dthread=1"
-             }
+        stage('Test') {
+            steps {
+                sh 'mvn clean test -Dfile=dataproviders -Ddp=smoke -Dthread=1'
+            }
         }
     }
 }

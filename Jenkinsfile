@@ -6,7 +6,7 @@ pipeline {
             steps {
                 git "https://github.com/okorol90/test_template.git"
             }
-        },
+        }
         stage('Analyze') {
              steps {
                 echo "analyze"

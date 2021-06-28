@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Preparation') {
             steps {
-                 git branch: 'develop', "https://github.com/okorol90/test_template.git"
+                 git branch: 'develop', url: "https://github.com/okorol90/test_template.git"
             }
         }
         stage('Analyze') {

@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Preparation') {
             steps {
-                git "https://github.com/okorol90/test_template/tree/develop"
+                git "https://github.com/okorol90/test_template.git"
             }
         }
         stage('Analyze') {

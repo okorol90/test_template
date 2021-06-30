@@ -18,5 +18,17 @@ pipeline {
 //                 bat 'mvn clean test -Dfile=dataproviders -Ddp=smoke -Dthread=1'
             }
         }
+        stage('reports') {
+            steps {
+            script {
+                    allure([
+                            includeProperties: false,
+                            properties: [],
+                            reportBuildPolicy: 'ALWAYS',
+                            results: [[path: 'allure-results']]
+                    ])
+            }
+            }
+        }
     }
 }

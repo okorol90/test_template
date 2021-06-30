@@ -7,7 +7,7 @@
     </listeners>
     <test name="Test">
         <classes>
-            <class name="webtest.NegativeTest"/>
+<!--            <class name="webtest.NegativeTest"/>-->
             <class name="webtest.SearchTest"/>
             <!--            <class name="webtest.AmazonIphoneSearchTest"/>-->
         </classes>
